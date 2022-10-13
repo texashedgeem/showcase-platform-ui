@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Showcase Admin</title>
+    <style>
+      table, th, td {
+        border: 1px solid #777;
+      }
+    </style>
+</head>
+<body>
+<table style="width:80%;">
+    <tr>
+        <th>Id</th>
+        <th>Created At</th>
+        <th>User Name</th>
+        <th>Bank Account</th>
+        <th>Status</th>
+    </tr>
+    <tr th:each="person : ${personList}">
+        <td th:text="${person.id}"></td>
+        <td th:text="${person.createdAt}"></td>
+        <td th:text="${person.userName}"></td>
+        <td th:text="${person.bankAccount}"></td>
+        <td th:text="${person.status}"></td>
+    </tr>
+</table>
+</body>
+</html>
